@@ -166,7 +166,8 @@ module.exports = function() {
           { type: 'text-summary' } //, subdir: '.', file: 'text-summary.txt'}
         ]
       },
-      preprocessors: {}
+      preprocessors: {},
+      junitReporterOut: report + 'test-results.xml'
     };
     options.preprocessors[clientApp + '**/!(*.spec)+(.js)'] = ['coverage'];
     return options;
