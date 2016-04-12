@@ -26,16 +26,10 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress', 'coverage'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['junit', 'coverage', 'progress'],
+    reporters: ['coverage', 'progress', 'junit'],
     junitReporter: {
-      outputFile: gulpConfig.karma.junitReporterOut
+      outputFile: 'test_results/test-results.xml'
     },
-    plugins: [
-        'karma-jasmine',
-        'karma-phantomjs-launcher',
-        'ec-karma-junit-reporter23',
-        'karma-coverage'
-    ],
     coverageReporter: {
       dir: gulpConfig.karma.coverage.dir,
       reporters: gulpConfig.karma.coverage.reporters
